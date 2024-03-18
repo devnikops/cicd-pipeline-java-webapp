@@ -37,6 +37,23 @@ pipeline {
             }
         }
 
+        stage("Sonarqube Analysis") {
+            steps {
+                withSonarQubeEnv('SonarQube-Server') {
+                    sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=java-webapp \
+                    -Dsonar.projectKey=java-webapp'''
+                }
+            }
+        }
+
+        stage('Quality Gate') {
+            steps {
+                script {
+                    waitForQualityGate abortPipeline: false, credentialsId: 'SonarQube-Token'
+                }
+            }
+        }
+
      /* stage('Publish to Nexus') {
             steps { 
                 script {
