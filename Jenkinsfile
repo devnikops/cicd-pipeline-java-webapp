@@ -80,8 +80,8 @@ pipeline {
                     verbose: false)
                 ])
             }
-        }
-    }*/
+        }*/
+    }
     post {
         failure {
             emailext(
