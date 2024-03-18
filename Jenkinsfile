@@ -55,7 +55,7 @@ pipeline {
                 }
             }
         }
-        stage('Print Environment variables') {
+       /* stage('Print Environment variables') {
             steps {
                 echo "Artifact ID is '${ArtifactId}'"
                 echo "Group ID is '${GroupId}'"
@@ -63,7 +63,7 @@ pipeline {
                 echo "Name is '${Name}'"
             }
         }
-        /*
+        
         stage('Deploy to Docker') {
             steps {
                 echo 'Deploying...'
