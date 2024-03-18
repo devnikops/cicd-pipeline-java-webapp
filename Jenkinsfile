@@ -46,12 +46,12 @@ pipeline {
                         ]
                     ], 
                     credentialsId: 'nexus', 
-                    groupId: '${GroupId}', 
+                    groupId: "${GroupId}", 
                     nexusUrl: '35.154.158.124:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
-                    repository: '${NexusRepo}', 
-                    version: '${Version}'              
+                    repository: "${NexusRepo}", 
+                    version: "${Version}"              
                 }
             }
         }
