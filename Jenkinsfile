@@ -31,7 +31,13 @@ pipeline {
             }
         }
 
-       stage('Publish to Nexus') {
+        stage('Run Junit Tests') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+     /* stage('Publish to Nexus') {
             steps { 
                 script {
                     def NexusRepo = Version.endsWith("SNAPSHOT") ? "MyLab-SNAPSHOT" : "MyLab-RELEASE"
@@ -46,12 +52,12 @@ pipeline {
                         ]
                     ], 
                     credentialsId: 'nexus', 
-                    groupId: '${GroupId}', 
-                    nexusUrl: '35.154.158.124:8081', 
+                    groupId: "${GroupId}", 
+                    nexusUrl: '13.232.79.166:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
-                    repository: '${NexusRepo}', 
-                    version: '${Version}'              
+                    repository: "${NexusRepo}", 
+                    version: "${Version}"              
                 }
             }
         }
@@ -63,7 +69,7 @@ pipeline {
                 echo "Name is '${Name}'"
             }
         }
-        /*
+        
         stage('Deploy to Docker') {
             steps {
                 echo 'Deploying...'
