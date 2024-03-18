@@ -31,7 +31,6 @@ pipeline {
             }
         }
 
-<<<<<<< HEAD
         stage('Run Junit Tests') {
             steps {
                 sh 'mvn test'
@@ -39,9 +38,6 @@ pipeline {
         }
 
      /* stage('Publish to Nexus') {
-=======
-     /*  stage('Publish to Nexus') {
->>>>>>> 4f32cd96094216ced7b8d6e4c85bd3129666603a
             steps { 
                 script {
                     def NexusRepo = Version.endsWith("SNAPSHOT") ? "MyLab-SNAPSHOT" : "MyLab-RELEASE"
