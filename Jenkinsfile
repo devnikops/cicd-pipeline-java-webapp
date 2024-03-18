@@ -81,8 +81,8 @@ pipeline {
                 ])
             }
         }
-    */
-        post {
+    }*/
+    post {
         failure {
             emailext(
                 to: 'devopswithnik@gmail.com',
