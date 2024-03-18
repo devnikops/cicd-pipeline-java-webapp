@@ -87,7 +87,7 @@ pipeline {
             emailext(
                 to: 'devopswithnik@gmail.com',
                 subject: "Build Failed: ${currentBuild.fullDisplayName}",
-                body: "This build has failed."
+                body: "This build has failed.",
                 attachLog: true
             )
         }
