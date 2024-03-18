@@ -4,7 +4,7 @@ pipeline {
     }
     tools {
         jdk 'jdk17'
-        maven 'maven'
+        maven 'maven3'
     }
     environment {
         ArtifactId = readMavenPom().getArtifactId()
