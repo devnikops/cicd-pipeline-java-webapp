@@ -89,28 +89,6 @@ pipeline {
                 echo "Name is '${Name}'"
             }
         }
-        
-    /*    stage('Deploy to Docker') {
-            steps {
-                echo 'Deploying...'
-                sshPublisher(publishers: 
-                [sshPublisherDesc(
-                    configName: 'ansible-controller', 
-                    transfers: [
-                        sshTransfer(
-                            sourceFiles: 'download-deploy.yaml, hosts',
-                            remoteDirectory: '/playbooks',
-                            cleanRemote: false,
-                            execCommand: 'cd playbooks/ && ansible-playbook download-deploy.yaml -i hosts', 
-                            execTimeout: 120000, 
-                        )
-                    ], 
-                    usePromotionTimestamp: false, 
-                    useWorkspaceInPromotion: false, 
-                    verbose: false)
-                ])
-            }
-        }*/
     }
     post {
         failure {
