@@ -11,6 +11,7 @@ pipeline {
         Version = readMavenPom().getVersion()
         GroupId = readMavenPom().getGroupId()
         Name = readMavenPom().getName()
+        SCANNER_HOME = tool 'sonar-scanner'
     }
     stages {
         stage('Cleanup Workspace') {
@@ -40,8 +41,7 @@ pipeline {
         stage("Sonarqube Analysis") {
             steps {
                 withSonarQubeEnv('SonarQube-Server') {
-                    sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=java-webapp \
-                    -Dsonar.projectKey=java-webapp'''
+                    sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=java-webapp \ -Dsonar.projectKey=java-webapp'''
                 }
             }
         }
