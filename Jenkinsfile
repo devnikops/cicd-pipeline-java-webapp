@@ -31,7 +31,7 @@ pipeline {
             }
         }
 
-       stage('Publish to Nexus') {
+     /*  stage('Publish to Nexus') {
             steps { 
                 script {
                     def NexusRepo = Version.endsWith("SNAPSHOT") ? "MyLab-SNAPSHOT" : "MyLab-RELEASE"
@@ -55,7 +55,7 @@ pipeline {
                 }
             }
         }
-       /* stage('Print Environment variables') {
+        stage('Print Environment variables') {
             steps {
                 echo "Artifact ID is '${ArtifactId}'"
                 echo "Group ID is '${GroupId}'"
