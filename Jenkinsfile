@@ -31,7 +31,7 @@ pipeline {
             }
         }
 
-        stage('Run Junit Tests') {
+        stage('JUnit Tests') {
             steps {
                 sh 'mvn test'
             }
