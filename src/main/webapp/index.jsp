@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Minhung's DevOps Lab</title>
+    <title>Nikhil's DevOps Lab</title>
 
 
     <!-- Custom styles for this template -->
@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Minhung's DevOps Lab</a>
+            <a class="navbar-brand" href="#">Nikhil's DevOps Lab</a>
         </div>
         <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form">
@@ -52,7 +52,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello</h1>
-        <p>This is Minhung's CICD Lab</p>
+        <p>This is Nikhil's CICD Lab</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
         <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p>
     </div>
@@ -91,7 +91,7 @@
     <hr>
 
     <footer>
-        <p>&copy; holdennguyen</p>
+        <p>&copy; Devnikops</p>
     </footer>
 </div> <!-- /container -->
 
