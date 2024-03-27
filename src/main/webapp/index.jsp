@@ -52,7 +52,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Hello Fokes!!!</h1>
-        <p>This is Nikhil's DevOps Lab...yahhoo</p>
+        <p>This is Nikhil's DevOps Lab...shutup</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
         <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p>
     </div>
